@@ -4,12 +4,17 @@ verify_ssl = true
 name = "pypi"
 
 [scripts]
-server = "uvicorn main:app --reload --port 12000"
+server = "uvicorn main:app --reload --port ${SERVER_PORT}"
 
 [packages]
 fastapi = "*"
 uvicorn = {extras = ["standard"], version = "*"}
 twilio = "*"
+pylint = "*"
+black = "*"
+sqlmodel = "*"
+mysql-connector-python = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
